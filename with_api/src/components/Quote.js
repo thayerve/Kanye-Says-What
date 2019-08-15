@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
-import { getQuote } from '../actions'
+import { getQuote } from '../actions';
+import { Header, Card } from 'semantic-ui-react';
+
 
 
 function Quote(props) {
@@ -10,8 +12,12 @@ function Quote(props) {
     return (
         
         <div>
-            <h1> Kanye says what? </h1>
-            <img src={props.imgUrl} alt="Kanye West" />
+            <Header as='h1'> Kanye says what? </Header>
+            <Card
+            image={props.imgUrl} 
+            description={props.quoteText} 
+            />
+            
             <button onClick={props.getQuote}>
                 {props.isLoading ? (
                     <Loader type="TailSpin" color="#00BFFF" height="15" width="100" />
@@ -19,7 +25,6 @@ function Quote(props) {
                         "Get random Kanye quote"
                     )}
             </button>
-            <p> {props.quoteText} </p>
         </div>
     );
 }

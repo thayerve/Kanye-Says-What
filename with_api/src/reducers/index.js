@@ -1,15 +1,41 @@
+import {
+    FETCH_QUOTE_START,
+    FETCH_QUOTE_SUCCESS,
+    FETCH_QUOTE_FAILURE
+  } from '../actions';
 
 const initialState = {
-    isLoading: false,
+    isFetching: false,
     quoteText: "",
-    imgUrl: "https://en.wikipedia.org/wiki/Kanye_West#/media/File:Kanye_West_at_the_2009_Tribeca_Film_Festival-2_(cropped).jpg"
+    imgUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Kanye_West_at_the_2009_Tribeca_Film_Festival-2_%28cropped%29.jpg",
+    error: ''
 }
 
 
-export const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case FETCH_QUOTE_START:
+            return {
+                ...state,
+                isFetching: true,
+                error: ''
+            };
+        case FETCH_QUOTE_SUCCESS:
+            return {   
+                ...state,
+                isFetching: false,
+                error: '',
+                quoteText: action.payload
+            };
+        case FETCH_QUOTE_FAILURE:
+            return {
+                ...state,
+                isFetching: false,
+                error: action.payload
+            }
         default:
-            return state
+            return state;
     };
 }
     
+export default reducer;

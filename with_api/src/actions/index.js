@@ -15,6 +15,6 @@ export const getQuote = () => dispatch => {
         .catch(err => 
             {
                 // console.log("OOOOOOOoooooops", err)
-                dispatch({ type: FETCH_QUOTE_FAILURE, payload: err });
+                dispatch({ type: FETCH_QUOTE_FAILURE, payload: err.response });
             });
 };

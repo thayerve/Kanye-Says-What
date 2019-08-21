@@ -14,7 +14,8 @@ const photos = [
     'https://townsquare.media/site/812/files/2019/01/Kanye-West-Legal-Case.jpg',
     'https://dazedimg-dazedgroup.netdna-ssl.com/900/azure/dazed-prod/1230/9/1239998.jpg',
     'https://media.gq.com/photos/5ad93798ceb93861adb912d8/1:1/w_2687,h_2687,c_limit/kanye-west-0814-GQ-FEKW01.01.jpg',
-    'https://media.npr.org/assets/artslife/arts/2010/11/kanye-west/kanye-west-64dcbf61c994ebb0c9325c6d62905dc3aa5326e4-s800-c85.jpg'
+    'https://media.npr.org/assets/artslife/arts/2010/11/kanye-west/kanye-west-64dcbf61c994ebb0c9325c6d62905dc3aa5326e4-s800-c85.jpg',
+    'https://directlyrics.com/img/upload/kanye-west-snl-2018.jpg'
 ];
 
 const randomPhoto = photos[Math.floor(Math.random()*photos.length)];

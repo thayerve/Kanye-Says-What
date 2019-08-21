@@ -12,20 +12,7 @@ code {
     monospace;
 }
 
-.App {
-  margin-top: 2rem;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  max-height: 100%;
+#root {
+  max-height: 100vh;
+  margin: auto;
 }
-
-footer {
-  margin: 4rem 0 auto;
-  display: flex;
-  align-items: center;
-  width:100%;
-  /* height:3rem;    */
-  
-} 
